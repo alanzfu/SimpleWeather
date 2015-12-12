@@ -5,8 +5,12 @@ var InputView = Backbone.View.extend({
     //controller for submitting zipcode
   },
 
-  render: function(){
-    return this.$el.html('<input class="zipcode-entry">Type in a zipcode and press enter<input>');
+  events: {
+    'enter key'
   }
-  
+
+  render: function(){
+    return this.$el.html('<input placeholder="Type in a zipcode and press enter"class="zipcode-entry"></input></br>');
+  }
+
 })

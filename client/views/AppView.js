@@ -11,9 +11,9 @@ var AppView = Backbone.View.extend({
 
   render: function(){
     var html = [
-      this.headingView.$el,
-      this.inputView.$el,
-      this.weatherCollectionView.$el
+      this.headingView.$el.html(),
+      this.inputView.$el.html(),
+      this.weatherCollectionView.$el.html()
     ].join('');
 
     this.$el.append(html);
