@@ -6,11 +6,14 @@ var InputView = Backbone.View.extend({
   },
 
   events: {
-    'enter key'
-  }
+   'enter input': function(e){
+      console.log('enter key was pressed');
+   }
+   
+  },
 
   render: function(){
-    return this.$el.html('<input placeholder="Type in a zipcode and press enter"class="zipcode-entry"></input></br>');
+    return this.$el.html('<input rows=2 placeholder="Type in a zipcode and press Enter"class="zipcode-entry"></input></br>');
   }
 
 })
