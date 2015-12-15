@@ -1,15 +1,17 @@
 var WeatherCollectionView = Backbone.View.extend({
-  el: '<div>',
+  tagName: 'div',
 
 
   initialize: function(){
+    this.collection.on('add', this.render, this);
     this.collection.on('change', this.render, this);
   },
 
   render: function(){
-    this.$el.html('<div><div>'); //overwrite when rendering
+     //overwrite when rendering
     this.$el.append(this.collection.map(function(weatherEntry){
-      var weatherEntryView = new WeatherEntryView({model: weatherEntry}).render();
+      var weatherEntryView = new WeatherEntryView({model: weatherEntry})
+      return weatherEntryView.render();
     }))
 
   }

@@ -1,8 +1,6 @@
 var WeatherEntryView = Backbone.View.extend({
 
-  tagName: 'p',
-
-  template: _.template('It is  <%= temp %> degrees in <%= city %>.'),
+  template: _.template('<p>It is  <%= temp %> degrees in <%= city %>.</p>'),
 
   initialize: function(){
     //controller event handler lives here
@@ -10,7 +8,7 @@ var WeatherEntryView = Backbone.View.extend({
   },
 
   render: function(){
-    return this.$el.html(this.template(this.model.attributes))
+    return this.$el.html(this.template(this.model.attributes));
   }
 
 

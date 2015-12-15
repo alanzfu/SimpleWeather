@@ -8,7 +8,7 @@ h1{
   text-align: center;
 }
 
-.zipcode-entry{
+input {
   width: 80%;
   height: 80px;
   font-size: 1.5em;
